@@ -1,9 +1,11 @@
-<table border="1">
-  <thead>
+<table border="1" class="table">
+  <thead class="thead-dark">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email Name</th>
+      <th>Profit</th>
+      <th>Met Goal? (> 900)</th>
     </tr>
   </thead>
 
@@ -12,6 +14,11 @@
       <td>{{ p.firstName }}</td>
       <td>{{ p.lastName }}</td>
       <td>{{ p.email }}</td>
+      <td>{{ p.progress | currency: "USD" }}</td>
+      <td>
+        <div *ngIf="p.progress > 900; else elseBlock">Yes</div>
+        <ng-template #elseBlock>No</ng-template>
+      </td>
     </tr>
   </tbody>
 </table>

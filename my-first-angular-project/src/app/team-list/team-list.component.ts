@@ -9,9 +9,11 @@ import { Person } from "./person";
 export class TeamListComponent implements OnInit {
   // Create an array of objects
   personList: Person[] = [
-    new Person("John", "Doe", "jdoe@gmail.com"),
-    new Person("Tommy", "Ruto", "tru@gmail.com"),
-    new Person("Utro", "Rewq", "reure@yahoo.com")
+    new Person("John", "Doe", "jdoe@gmail.com", 809),
+    new Person("Tommy", "Ruto", "tru@gmail.com", 915),
+    new Person("Utro", "Nunes", "ununes@yahoo.com", 504),
+    new Person("Rome", "Luqo", "romelu@yahoo.com", 918),
+    new Person("Jay", "Aras", "araj@yahoo.com", 658)
   ];
   constructor() {}
 
